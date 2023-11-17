@@ -1,0 +1,33 @@
+spec
+	triplet example:`subject predicate:object` d:"An element of the graph with two nodes `()` and one oriented named edge `--->`: " graph-pattern:`(subject) ------predicate-----> (object)`
+	item example:`item p1:o1 p2:o2 p3:o3` def:"A set of triplets with the same subject"
+	modularization
+		include code-pattern:`[file.tree]` d:"Include triplets from the file"
+	inheritance_modificators
+		substitutive_inheritance_exclusive syn:`+` d:"Substitute inherited elements"
+		substitutive_inheritance_inclusive `+!` d:"Substitute inherited elements including item where modificator is defined"
+		additive_inheritance syn:`++` d:"Inherit with addition"
+		additive_inheritance syn:`++!` d:"Inherit with addition including item where modificator is defined"
+		ignore_inheritance syn:`*` d:"Ignore inheritance and assign only current predicate-object to item"
+	links_parent-leaves
+		link_parent-leaves syn:`inv-rel:`
+		link_leaves-parent syn:`hi-inv-rel:`
+	sections
+		ontology
+		namespaces d:"Section over the list of items that describe used namespaces, including prefixes and URI"
+		classes d:"List of the classes"
+		properties d:"List of the properties"
+		individuals d:"List of the individuals (instances)"
+	aliases d:"Shorthand variants of frequently used properties"
+		a equiv:`rdf/type`
+		alt equiv:`owl/sameAs` d:"Alternative id name for the real-world entity (that is some instance of some class)"
+		d equiv:`rdfs/comment` d:"Some (not too long) comment to describe the entity, including this one :-)"
+		disjoint-with
+		domain equiv:`rdfs/domain`
+		eq equiv:`owl/sameAs` d:"Usually the link between two real-world objects, that states it is the same entity"
+		eq-class
+		eq-property
+		name equiv:`rdfs/label` d:"A form of entity to represent it in the visualizations or tables, often is used to fixate the full name of the entity as it usually written and which is quite long to be an Id"
+		range equiv:`rdfs/range`
+		subclass-of equiv:`rdfs/subClassOf`
+		subproperty-of equiv:`rdfs/subPropertyOf`

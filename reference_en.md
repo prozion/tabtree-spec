@@ -121,8 +121,7 @@ cities +a:UrbanPlace
 ```
 
 <b>\*</b> Asterisk sign overwrites predicate-object inherited from
-above, while plain predicate-object without prefixes just adds up to the
-inherited one:
+above:
 
 **Tabtree source**
 
